@@ -1,0 +1,235 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+    background-color: #18C29C;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+}
+h1{
+    animation: slide 3s;
+    animation-timing-function: cubic-bezier(.45,.56,.45,.88)
+}
+
+.container_Head{
+    
+    background-color: #126872;
+    margin-top: 0;
+    padding: 4vh 0 4vh 0;
+    text-align: center;
+    color: white;
+    border-bottom: 2px solid white;
+    position: sticky;
+    top: 0;
+}
+footer{
+    background-color: #126872;
+    padding: 0 0 10vh 0;
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    border-top: 2px solid white;
+}
+h3{
+    margin-left: 3vw;
+}
+.fa-coins{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.list_container{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    margin: 2vh 0 5vh 0;
+    
+}
+.container{
+    display: flex;
+}
+
+
+.container1{
+    display: grid;
+    width: 50vw;
+    grid-template-columns:  10vw 10vw 10vw;
+    grid-template-rows: 5vh auto;
+    grid-template-areas: "base icon compare"
+                         "lower lower lower"
+                         "foot foot foot";
+    
+
+    align-items: center;
+    justify-content: center;
+    border-right: 1px dotted white;
+    border-bottom: 1px dotted white;
+}
+.container2{
+    text-align: center;
+    width: 50vw;
+    border-bottom: 1px dotted white;
+
+}
+.compare{
+ grid-area: compare;
+    margin-right: 10vw;
+}
+ul{
+    list-style: none;
+}
+
+button{
+    grid-area: foot;
+    width: 50%;
+     border-radius: 6px;
+    margin: 2vh 0 1vh 7vw;
+    box-shadow: 0 1px 1px 2px gray;
+    
+}
+
+.base{
+    grid-area: base;
+}
+input{
+ grid-area: lower;
+ border-radius: 6px;
+}
+.fa-exchange-alt{
+    grid-area: icon;
+    width: 5vw;
+    text-align: center;
+     margin-left: 1vw;
+}
+.head_Li{
+    font-size: 1.2rem;
+    padding: 1vh 1vw 1vh 1vw;
+    width: 20vw;
+    margin-bottom: 2vh;
+    border-radius: 5px;
+    margin-left: 4vw;
+    border: none;
+
+    
+}
+
+
+li{
+    text-align: center;
+    width: 10vw;
+    align-self: left;
+    font-size: 0.8rem;
+    border-radius: 10px;
+}
+img{
+    height: 10px;
+    width: 10px;
+}
+
+.inner,.inner1{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3,20%);
+    grid-template-rows: 10%;
+    grid-gap: 0.5rem;
+    margin-left: -55%;
+}
+img{
+    margin-left: 0.5vw;
+}
+
+.outer:hover .inner{
+    cursor: pointer;
+    transition: 600ms ease-in-out;
+}
+.outer1:hover .inner1{
+    cursor: pointer;
+    opacity: 1;
+    transition: 600ms ease-in-out;
+}
+li:hover{
+    transform: scale(1.2);
+    box-shadow: 0 1px 5px 1px white;
+    transition: 500ms ease-in-out;
+    color: black;
+    background-color: white;
+}
+.head_Li:hover{
+    transform: scale(1);
+    box-shadow: 0 0 0 0;
+    
+}
+button:hover{
+    cursor: pointer;
+}
+button:active{
+    cursor: pointer;
+    box-shadow: 0 0 0 0;
+    transition: 400ms;
+     color: white;
+    background: #126872;
+    transition: 350ms;
+}
+
+
+@keyframes slide{
+    0%{
+        transform: translateX(-150px);
+        opacity: 0.5
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+@media all and (min-width:800px){
+    .inner,.inner1{
+        margin-left: -20%;
+    }
+    button{
+        width: 7vw;
+        margin-left: 10vw;
+    }
+    .compare{
+        margin-left: -4.5vw;
+    }
+    .base{
+        margin-left: 8.8vw;
+    }
+    input{
+        width: 10vw;
+        margin-left: 8vw;
+    }
+    footer{
+    padding: 0 0 10vh 0;
+    }
+    h3{
+        margin-left: 12vw;
+    }
+    .head_Li{
+    font-size: 1.2rem;
+    padding: 1vh 1vw 1vh 1vw;
+    width: 10vw;
+    margin-left: 13.5vw;
+   }
+    li{
+         width: 5vw;
+        font-size: 1.2rem;
+    }
+    img{
+    height: 15px;
+    width: 15px;
+    }
+    .container_Head{
+    padding: 2vh 0 2vh 0;
+
+}
+
+}
+    
+
